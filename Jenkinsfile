@@ -12,12 +12,12 @@ pipeline {
            steps {
 	    sh 'cd /var/lib/jenkins/workspace/pipelinetest1/dockertest1'
 	    sh 'cp /var/lib/jenkins/workspace/pipelinetest1/dockertest1/* /var/lib/jenkins/workspace/pipelinetest1'
-	    sh 'docker build -t gnapi9642/pipelinetest:v1 .'
+	    sh 'docker build -t gnapi9642/pipelinetest:v2 .'
 	 }
  }
 	stage('Push Image to Docker Hub') {
            steps {
-	    sh	'docker push gnapi9642/pipelinetest:v1'
+	    sh	'docker push gnapi9642/pipelinetest:v2'
 	 }
  }
 	stage('Deploy to Docker Host') {
