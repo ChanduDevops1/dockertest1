@@ -1,5 +1,6 @@
 pipeline {
     agent any
+     stages {
 	stage('Clone Repo') {
     	  steps {
 	    sh 'rm -rf dockertest1'
@@ -30,5 +31,6 @@ pipeline {
 	   sh 'sleep 10s'
 	   sh 'curl http://ec2-54-173-153-51.compute-1.amazonaws.com:9000'
 	 }
+}
 }
 }
