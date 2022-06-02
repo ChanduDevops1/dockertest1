@@ -29,7 +29,7 @@ pipeline {
 	stage('Check WebApp Rechability') {
           steps {
 	   sh 'sleep 10s'
-	   sh 'curl http://ec2-54-173-153-51.compute-1.amazonaws.com:9000'
+	   sh 'curl http://ec2-54-160-149-85.compute-1.amazonaws.com:9000'
 	 }
 }
 }
